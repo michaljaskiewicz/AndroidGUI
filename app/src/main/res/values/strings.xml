@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Android GUI</string>
+    <string name="first_name">Imię</string>
+    <string name="last_name">Nazwisko</string>
+    <string name="number_of_grades">Liczba ocen</string>
+    <string name="grades">Oceny</string>
+    <string name="enter_first_name">Podaj imię</string>
+    <string name="enter_last_name">Podaj nazwisko</string>
+    <string name="proper_amount_of_grades_message">Liczba ocen musi być od 5 do 15</string>
+    <string name="list_of_grades">Lista ocen</string>
+    <string name="grade">Ocena</string>
+    <string name="finish_button_text">Gotowe</string>
+    <string name="enter_all_grades">Podaj wszystkie oceny!</string>
+    <string name="your_average_grade_is">Twoja średnia ocen to: </string>
+    <string name="student_failled_finish_button">Tym razem mi nie poszło</string>
+    <string name="super_finish_button">Super :)</string>
+    <string name="succes_student_pass_message">Gratulacje! Otrzymujesz zaliczenie</string>
+    <string name="student_failled_message">Wysyłam podanie o zaliczenie warunkowe.</string>
+</resources>
