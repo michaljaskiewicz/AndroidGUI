@@ -1,4 +1,4 @@
-package com.dev.jaskiewicz.androidgui;
+package com.dev.jaskiewicz.androidgui.grades;
 
 public class Grade {
 

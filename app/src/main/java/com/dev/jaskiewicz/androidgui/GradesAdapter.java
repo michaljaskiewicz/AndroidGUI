@@ -10,14 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.dev.jaskiewicz.androidgui.grades.Grade;
+
 import java.util.List;
 
 public class GradesAdapter extends ArrayAdapter<Grade> {
-    public static final String LOG_TAG = GradesAdapter.class.getSimpleName();
 
+    private static final String LOG_TAG = GradesAdapter.class.getSimpleName();
     private static final int RESOURCE_NOT_NEEDED = 0;
-    private static final boolean DO_NOT_ATTACH_TO_ROOT = false;
     private static final int CLEAR_CHECK = -1;
+    private static final boolean DO_NOT_ATTACH_TO_ROOT = false;
 
     private Activity context;
     private List<Grade> grades;

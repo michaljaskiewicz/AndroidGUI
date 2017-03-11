@@ -1,4 +1,4 @@
-package com.dev.jaskiewicz.androidgui;
+package com.dev.jaskiewicz.androidgui.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.dev.jaskiewicz.androidgui.R;
 
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;

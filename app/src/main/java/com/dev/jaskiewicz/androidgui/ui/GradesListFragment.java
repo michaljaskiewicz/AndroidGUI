@@ -1,12 +1,16 @@
-package com.dev.jaskiewicz.androidgui;
+package com.dev.jaskiewicz.androidgui.ui;
 
 
 import android.app.ListFragment;
 import android.os.Bundle;
+
+import com.dev.jaskiewicz.androidgui.GradesAdapter;
+import com.dev.jaskiewicz.androidgui.grades.Grade;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.dev.jaskiewicz.androidgui.GradesWindow.AMOUNT_OF_GRADES_FOR_GRADES_LIST_FRAGMENT;
+import static com.dev.jaskiewicz.androidgui.ui.GradesWindow.AMOUNT_OF_GRADES_FOR_GRADES_LIST_FRAGMENT;
 
 public class GradesListFragment extends ListFragment {
 
@@ -17,12 +21,12 @@ public class GradesListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
-        getAmountOfGradesFromWindow();
+        getAmountOfGradesFromMainWindow();
         createGrades();
         addGradesAdapter();
     }
 
-    private void getAmountOfGradesFromWindow() {
+    private void getAmountOfGradesFromMainWindow() {
         amountOfGrades = getArguments().getInt(AMOUNT_OF_GRADES_FOR_GRADES_LIST_FRAGMENT);
     }
 

@@ -1,17 +1,16 @@
-package com.dev.jaskiewicz.androidgui;
+package com.dev.jaskiewicz.androidgui.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import static com.dev.jaskiewicz.androidgui.MainWindow.AMOUNT_OF_GRADES;
-import static com.dev.jaskiewicz.androidgui.MainWindow.AVERAGE_GRADE;
+import com.dev.jaskiewicz.androidgui.R;
+import com.dev.jaskiewicz.androidgui.grades.GradesCalculator;
 
 public class GradesWindow extends AppCompatActivity {
-    public static final String LOG_TAG = GradesWindow.class.getSimpleName();
+
     public static final String AMOUNT_OF_GRADES_FOR_GRADES_LIST_FRAGMENT = "amount of grades for GradesListFragment";
 
     private static final String GRADES_LIST_FRAGMENT_KEY = GradesListFragment.class.getSimpleName();
@@ -32,7 +31,7 @@ public class GradesWindow extends AppCompatActivity {
     }
 
     private int getAmountOfGradesFromMainWindow() {
-        return getIntent().getIntExtra(AMOUNT_OF_GRADES, DEFAULT_AMOUNT_OF_GRADES);
+        return getIntent().getIntExtra(MainWindow.AMOUNT_OF_GRADES, DEFAULT_AMOUNT_OF_GRADES);
     }
 
     private void createGradesListFragmentWith(int amountOfGrades) {
@@ -62,7 +61,7 @@ public class GradesWindow extends AppCompatActivity {
     /**
      * Metoda wywoływana jako onClick przycisku do zatwierdzenia wybranych wartości z listy ocen
      */
-    public void goBackWithTheResult(View view) {
+    public void goBackToMainWindowWithTheResult(View view) {
         if (fragment.everyGradeHasValue()) {
             prepareResult();
             finish();
@@ -81,7 +80,7 @@ public class GradesWindow extends AppCompatActivity {
 
     private Bundle createBundleWith(double averageGrade) {
         Bundle bundle = new Bundle();
-        bundle.putDouble(AVERAGE_GRADE, averageGrade);
+        bundle.putDouble(MainWindow.AVERAGE_GRADE, averageGrade);
         return bundle;
     }
 
